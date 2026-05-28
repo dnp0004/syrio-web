@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Política de Privacidad — Syrio</title>
+    <meta name="description">
+    <meta name="theme-color" content="#CF6637">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://syrio.app">
+    <link rel="alternate" hreflang="x-default" href="https://syrio.app">
+    <link rel="alternate" hreflang="es-ES" href="https://syrio.app">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Política de Privacidad — Syrio">
+    <meta property="og:description">
+    <meta property="og:image" content="/images/og-default.png">
+    <meta property="og:url" content="https://syrio.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Syrio">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Política de Privacidad — Syrio">
+    <meta name="twitter:description">
+    <meta name="twitter:image" content="/images/og-default.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+    <!-- Fuente: Nunito self-hosted + preload (Agente 37) -->
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaB.woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Schema JSON-LD -->
+    
+
+    <link rel="stylesheet" href="./css/landing.css">
+
+    <!-- Analytics (Agentes 89, 91) - Plausible: privacy-friendly, no GDPR cookie banner needed -->
+    <script defer data-domain="syrio.app" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+
+    <!-- GSAP + ScrollTrigger (cargar en head para animaciones inmediatas) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<!-- Scroll progress bar -->
+<div id="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent));z-index:200;width:0;border-radius:0 3px 3px 0;box-shadow:0 0 8px rgba(207,102,55,0.3)"></div>
+
+<!-- Skip to content (Agentes 4, 60) -->
+<a href="#main-content" class="skip-link" style="position:absolute;top:-100px;left:16px;z-index:200;background:var(--primary);color:#fff;padding:12px 24px;border-radius:0 0 12px 12px;font-weight:800;font-size:15px;text-decoration:none;transition:top 0.2s">Saltar al contenido</a>
+
+<!-- Constellation Canvas -->
+<canvas id="constellation-canvas" aria-hidden="true"></canvas>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+        <a href="/" class="nav-logo">
+            <img src="./images/logo.png" alt="Syrio" onerror="this.style.display='none'">
+            <span>Syrio</span>
+        </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu de navegacion" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="#features">Funcionalidades</a>
+            <a href="#video">Video</a>
+            <a href="#">Blog</a>
+            <a href="" class="nav-cta">Descargar</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main id="main-content" class="main-content">
+    
+<div class="legal-content">
+    <h1>Política de Privacidad</h1>
+    <p><strong>Última actualización:</strong> 22 de mayo de 2026</p>
+
+    <h2>1. Responsable del tratamiento</h2>
+    <p><strong>Syrio</strong><br>Email: holasyrio@gmail.com</p>
+
+    <h2>2. Datos que recopilamos</h2>
+    <p>Para ofrecer nuestros servicios, recopilamos los siguientes datos:</p>
+    <p>• <strong>Datos de registro</strong>: nombre, correo electrónico, fecha de nacimiento.<br>
+    • <strong>Datos de perfil</strong>: foto de perfil, nombre social, biografía, ciudad, mascotas.<br>
+    • <strong>Contenido generado</strong>: publicaciones, comentarios, fotos, vídeos.<br>
+    • <strong>Datos de localización</strong>: ubicación aproximada para mostrar servicios cercanos.<br>
+    • <strong>Datos de uso</strong>: interacciones dentro de la app para mejorar la experiencia.</p>
+
+    <h2>3. Finalidad del tratamiento</h2>
+    <p>• Proporcionar las funcionalidades de la app (mapa, comunidad, SOS, recordatorios).<br>
+    • Enviar notificaciones relevantes sobre tu actividad y la de tus mascotas.<br>
+    • Mejorar la app y corregir errores.<br>
+    • Cumplir con obligaciones legales.</p>
+
+    <h2>4. Base legal</h2>
+    <p>El tratamiento de tus datos se basa en tu consentimiento explícito, la ejecución del servicio y el cumplimiento de obligaciones legales.</p>
+
+    <h2>5. Tus derechos</h2>
+    <p>Tienes derecho a acceder, rectificar, suprimir, limitar y portar tus datos. Puedes ejercerlos escribiendo a <strong>holasyrio@gmail.com</strong> o desde la sección "Exportar mis datos" en los ajustes de la app.</p>
+
+    <h2>6. Conservación de datos</h2>
+    <p>Conservamos tus datos mientras mantengas tu cuenta activa. Puedes solicitar su eliminación en cualquier momento.</p>
+
+    <h2>7. Compartición de datos</h2>
+    <p>No vendemos tus datos a terceros. Utilizamos los siguientes servicios que pueden procesar datos:</p>
+    <p>• Supabase (infraestructura de base de datos y autenticación)<br>
+    • Cloudflare R2 (almacenamiento de imágenes)<br>
+    • Google Maps Platform (datos de lugares)<br>
+    • Resend (envío de correos electrónicos transaccionales)</p>
+
+    <h2>8. Contacto</h2>
+    <p>Para cualquier duda sobre privacidad: <strong>holasyrio@gmail.com</strong></p>
+</div>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Syrio</h3>
+                <p>Tu tranquilidad tiene nombre de estrella. La app que une a dueños, veterinarias, tiendas y refugios de mascotas en España.</p>
+                <div class="footer-social">
+                    <a href="" target="_blank" rel="noopener" aria-label="Instagram">&#x1F4F7;</a>
+                    <a href="" target="_blank" rel="noopener" aria-label="TikTok">&#x1F3B5;</a>
+                    <a href="mailto:null" aria-label="Email">&#x2709;&#xFE0F;</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Syrio</h4>
+                <a href="#features">Funcionalidades</a>
+                <a href="#video">Video</a>
+                <a href="#">Blog</a>
+                <a href="">Descargar</a>
+                <a href="mailto:null">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="privacidad.html">Privacidad</a>
+                <a href="terminos.html">Terminos</a>
+                <a href="cookies.html">Cookies</a>
+            </div>
+            <div class="footer-col">
+                <h4>Siguenos</h4>
+                <a href="" target="_blank" rel="noopener">Instagram</a>
+                <a href="" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Syrio &middot; Hecho con cuidado en Malaga, Espana
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ─── Constellation Animation (optimized - Agentes 33, 40, 62) ───
+    (function () {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) return;
+
+        const canvas = document.getElementById('constellation-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d', { alpha: true });
+        let stars = [];
+        let mouse = { x: -1000, y: -1000 };
+        let mousePending = { x: -1000, y: -1000 };
+        let width, height;
+        let animationId;
+        let isVisible = true;
+        let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function createStars() {
+            stars = [];
+            const density = width < 768 ? 35000 : 18000;
+            const count = Math.floor((width * height) / density);
+            const connRadius = width < 768 ? 80 : 120;
+            for (let i = 0; i < count; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 1.8 + 0.6,
+                    baseOpacity: Math.random() * 0.3 + 0.12,
+                    phase: Math.random() * Math.PI * 2,
+                    speed: 0.002 + Math.random() * 0.005,
+                    connRadius: connRadius
+                });
+            }
+        }
+
+        function draw() {
+            if (!isVisible) { animationId = requestAnimationFrame(draw); return; }
+            ctx.clearRect(0, 0, width, height);
+            const time = Date.now() * 0.001;
+            const connR = stars.length > 0 ? stars[0].connRadius : 120;
+
+            ctx.strokeStyle = 'rgba(207,102,55,0.06)';
+            ctx.lineWidth = 0.6;
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    const dx = stars[i].x - stars[j].x;
+                    const dy = stars[i].y - stars[j].y;
+                    const dist = dx * dx + dy * dy;
+                    if (dist < connR * connR) {
+                        const sqrtDist = Math.sqrt(dist);
+                        ctx.beginPath();
+                        ctx.moveTo(stars[i].x, stars[i].y);
+                        ctx.lineTo(stars[j].x, stars[j].y);
+                        ctx.globalAlpha = (1 - sqrtDist / connR) * 0.22;
+                        ctx.stroke();
+                    }
+                }
+            }
+            ctx.globalAlpha = 1;
+
+            for (const s of stars) {
+                const twinkle = Math.sin(time * s.speed * 10 + s.phase) * 0.3 + 0.7;
+                const opacity = s.baseOpacity * twinkle;
+                const gradient = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4);
+                gradient.addColorStop(0, `rgba(207,102,55,${opacity})`);
+                gradient.addColorStop(0.5, `rgba(232,155,32,${opacity * 0.4})`);
+                gradient.addColorStop(1, 'rgba(207,102,55,0)');
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r * 4, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(207,102,55,${Math.min(opacity * 1.2, 1)})`;
+                ctx.fill();
+            }
+        }
+
+        function animate() {
+            draw();
+            mouse.x += (mousePending.x - mouse.x) * 0.1;
+            mouse.y += (mousePending.y - mouse.y) * 0.1;
+            animationId = requestAnimationFrame(animate);
+        }
+
+        resize();
+        createStars();
+        animate();
+
+        new IntersectionObserver(([entry]) => {
+            isVisible = entry.isIntersecting;
+        }).observe(canvas);
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) { cancelAnimationFrame(animationId); }
+            else { animate(); }
+        });
+
+        window.addEventListener('resize', () => { resize(); createStars(); });
+        window.addEventListener('mousemove', (e) => {
+            mousePending.x = e.clientX;
+            mousePending.y = e.clientY;
+        }, { passive: true });
+        window.addEventListener('touchmove', (e) => {
+            mousePending.x = e.touches[0].clientX;
+            mousePending.y = e.touches[0].clientY;
+        }, { passive: true });
+    })();
+
+    // ─── Parallax Effect ───
+    (function () {
+        const parallaxElements = document.querySelectorAll('.parallax-slow');
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    parallaxElements.forEach(el => {
+                        el.style.transform = `translateY(${scrollY * 0.12}px)`;
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    })();
+
+    // ─── Phone Screenshot Rotation ───
+    (function () {
+        const screens = document.querySelectorAll('.phone-screen img');
+        if (screens.length === 0) return;
+        let current = 0;
+        // Show first immediately
+        if (screens.length > 0) screens[0].classList.add('active');
+        setInterval(() => {
+            screens[current].classList.remove('active');
+            current = (current + 1) % screens.length;
+            screens[current].classList.add('active');
+        }, 3500);
+    })();
+
+    // ─── Scroll: Navbar, Fade-in, Bento Cards ───
+    (function () {
+        const navbar = document.getElementById('navbar');
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const bentoCards = document.querySelectorAll('.bento-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+        fadeElements.forEach(el => observer.observe(el));
+        bentoCards.forEach(el => observer.observe(el));
+
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const now = window.scrollY;
+            if (now > 30) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = now;
+        }, { passive: true });
+
+        // Scroll progress bar
+        var progressBar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', function() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var progress = (scrollTop / scrollHeight) * 100;
+            if (progressBar) progressBar.style.width = progress + '%';
+        }, { passive: true });
+    })();
+
+    // ─── Hamburger Menu (Agente 44) ───
+    (function () {
+        const btn = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('nav-links');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !expanded);
+            nav.classList.toggle('open');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+
+    // ─── Newsletter Form (Agentes 7, 29, 92) ───
+    (function () {
+        const form = document.getElementById('newsletter-form');
+        if (!form) return;
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const input = form.querySelector('input[type="email"]');
+            const consent = document.getElementById('gdpr-consent');
+            const btn = form.querySelector('button');
+            const success = document.getElementById('newsletter-success');
+            const errorEl = document.getElementById('newsletter-error');
+            const email = input.value.trim();
+
+            if (!email || !email.includes('@')) {
+                errorEl.style.display = 'block';
+                errorEl.textContent = 'Por favor, introduce un email valido.';
+                return;
+            }
+
+            if (consent && !consent.checked) {
+                errorEl.style.display = 'block';
+                errorEl.textContent = 'Debes aceptar la politica de privacidad para suscribirte.';
+                return;
+            }
+
+            errorEl.style.display = 'none';
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+
+            try {
+                const res = await fetch('/api/newsletter', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, source: 'web' })
+                });
+                if (res.ok) {
+                    form.style.display = 'none';
+                    success.style.display = 'block';
+                } else {
+                    const data = await res.json().catch(() => ({}));
+                    btn.disabled = false;
+                    btn.textContent = 'Suscribirme';
+                    errorEl.style.display = 'block';
+                    errorEl.textContent = data.message || 'Error al suscribir. Intenta de nuevo o escribenos a holasyrio@gmail.com';
+                }
+            } catch {
+                btn.disabled = false;
+                btn.textContent = 'Suscribirme';
+                errorEl.style.display = 'block';
+                errorEl.textContent = 'Error de conexion. Revisa tu internet e intenta de nuevo.';
+            }
+        });
+    })();
+
+    // ─── GSAP Premium Animations (Agentes 34, 45, 93) ───
+    (function () {
+        if (typeof gsap === 'undefined') return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero entrance - staggered text reveal
+        gsap.from('.hero-text h1', {
+            y: 60, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+        gsap.from('.hero-text p', {
+            y: 40, opacity: 0, duration: 0.8, delay: 0.3, ease: 'power3.out'
+        });
+        gsap.from('.hero-buttons', {
+            y: 30, opacity: 0, duration: 0.7, delay: 0.5, ease: 'power3.out'
+        });
+        gsap.from('.trust-badges', {
+            y: 20, opacity: 0, duration: 0.6, delay: 0.7, ease: 'power3.out'
+        });
+        gsap.from('.phone-mockup', {
+            x: 80, opacity: 0, duration: 1.2, delay: 0.2, ease: 'power3.out'
+        });
+
+        // Organic blobs floating
+        gsap.to('.organic-blob', {
+            duration: 20,
+            x: 'random(-30, 30)',
+            y: 'random(-20, 30)',
+            rotation: 'random(-15, 15)',
+            scale: 'random(0.95, 1.08)',
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            stagger: { each: 3 }
+        });
+
+        // Bento grid scroll reveal
+        gsap.utils.toArray('.bento-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                },
+                y: 60,
+                opacity: 0,
+                duration: 0.7,
+                delay: i * 0.08,
+                ease: 'power3.out'
+            });
+        });
+
+        // Section headers scroll reveal
+        gsap.utils.toArray('.section-header').forEach(header => {
+            gsap.from(header, {
+                scrollTrigger: {
+                    trigger: header,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none'
+                },
+                y: 40,
+                opacity: 0,
+                duration: 0.7,
+                ease: 'power3.out'
+            });
+        });
+
+        // Screenshot cards stagger
+        gsap.utils.toArray('.screenshot-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card.parentElement,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                },
+                x: 60,
+                opacity: 0,
+                duration: 0.6,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
+        });
+
+        // Blog cards stagger
+        gsap.utils.toArray('.blog-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.6,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
+        });
+
+        // Newsletter box pop
+        gsap.from('.newsletter-box', {
+            scrollTrigger: {
+                trigger: '.newsletter-box',
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            },
+            scale: 0.95,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'back.out(1.4)'
+        });
+
+        // CTA section parallax
+        gsap.to('.cta-section .organic-blob:first-child', {
+            scrollTrigger: {
+                trigger: '.cta-section',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1
+            },
+            y: -80,
+            scale: 1.1
+        });
+
+        // Parallax on hero blobs
+        gsap.to('.hero .organic-blob:first-child', {
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            },
+            y: 120,
+            x: -40
+        });
+
+        // 3D Tilt effect on phone mockup (desktop only)
+        if (window.innerWidth > 960) {
+            var phoneMockup = document.querySelector('.phone-mockup-inner');
+            if (phoneMockup) {
+                phoneMockup.addEventListener('mousemove', function(e) {
+                    var rect = this.getBoundingClientRect();
+                    var x = e.clientX - rect.left;
+                    var y = e.clientY - rect.top;
+                    var centerX = rect.width / 2;
+                    var centerY = rect.height / 2;
+                    var rotateY = ((x - centerX) / centerX) * 8;
+                    var rotateX = -((y - centerY) / centerY) * 8;
+                    gsap.to(this, { rotateY: rotateY, rotateX: rotateX, duration: 0.5, ease: 'power2.out' });
+                });
+                phoneMockup.addEventListener('mouseleave', function() {
+                    gsap.to(this, { rotateY: 0, rotateX: 0, duration: 0.7, ease: 'power2.out' });
+                });
+            }
+        }
+
+        // Hover glow effect on bento cards
+        document.querySelectorAll('.bento-card, .blog-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                gsap.to(this, { scale: 1.02, duration: 0.4, ease: 'power2.out' });
+            });
+            card.addEventListener('mouseleave', function() {
+                gsap.to(this, { scale: 1, duration: 0.4, ease: 'power2.out' });
+            });
+        });
+
+    })();
+</script>
+
+<!-- Cookie Consent Banner (Agentes 7, 29) -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:16px 24px;z-index:9999;display:none;box-shadow:0 -4px 24px rgba(0,0,0,0.08);font-size:14px;line-height:1.5">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <p style="margin:0;color:var(--text-secondary);max-width:700px">
+            Usamos cookies tecnicas necesarias para el funcionamiento del sitio y analitica anonima (Plausible) para mejorar tu experiencia. Sin cookies de publicidad ni rastreo. 
+            <a href="privacidad.html" style="color:var(--primary);font-weight:700;text-decoration:underline">Politica de privacidad</a>.
+        </p>
+        <div style="display:flex;gap:10px;flex-shrink:0">
+            <button id="cookie-reject" style="background:transparent;color:var(--text-secondary);border:1px solid var(--border);padding:10px 20px;border-radius:12px;font-weight:700;cursor:pointer;font-family:inherit;font-size:14px;transition:all 0.2s">Solo necesarias</button>
+            <button id="cookie-accept" style="background:var(--primary);color:#fff;border:none;padding:10px 20px;border-radius:12px;font-weight:800;cursor:pointer;font-family:inherit;font-size:14px;transition:all 0.2s">Aceptar todas</button>
+        </div>
+    </div>
+</div>
+<script>
+(function() {
+    if (localStorage.getItem('syrio-cookies')) return;
+    var banner = document.getElementById('cookie-banner');
+    banner.style.display = 'block';
+    document.getElementById('cookie-accept').onclick = function() {
+        localStorage.setItem('syrio-cookies', 'accepted');
+        banner.style.display = 'none';
+    };
+    document.getElementById('cookie-reject').onclick = function() {
+        localStorage.setItem('syrio-cookies', 'rejected');
+        banner.style.display = 'none';
+    };
+})();
+</script>
+</body>
+</html>

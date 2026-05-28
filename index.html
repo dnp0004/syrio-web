@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Syrio — App para mascotas en España</title>
+    <meta name="description" content="La app que tu mascota merece. Veterinarios cerca, comunidad, mascotas perdidas, recordatorios de salud y mucho más. Gratis.">
+    <meta name="theme-color" content="#CF6637">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://syrio.app">
+    <link rel="alternate" hreflang="x-default" href="https://syrio.app">
+    <link rel="alternate" hreflang="es-ES" href="https://syrio.app">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Syrio — App para mascotas en España">
+    <meta property="og:description" content="La app que tu mascota merece. Veterinarios cerca, comunidad, mascotas perdidas, recordatorios de salud y mucho más. Gratis.">
+    <meta property="og:image" content="/images/og-default.png">
+    <meta property="og:url" content="https://syrio.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Syrio">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Syrio — App para mascotas en España">
+    <meta name="twitter:description" content="La app que tu mascota merece. Veterinarios cerca, comunidad, mascotas perdidas, recordatorios de salud y mucho más. Gratis.">
+    <meta name="twitter:image" content="/images/og-default.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+
+    <!-- Fuente: Nunito self-hosted + preload (Agente 37) -->
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaB.woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Schema JSON-LD -->
+    
+        <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Syrio",
+      "url": "https://syrio.app",
+      "logo": "https://syrio.app/images/logo.png",
+      "foundingDate": "2025",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Malaga",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://www.instagram.com/syrio_es/",
+        "https://www.tiktok.com/@syrio_es"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "holasyrio@gmail.com",
+        "contactType": "customer service",
+        "availableLanguage": ["Spanish"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "name": "Syrio — App para Mascotas",
+      "url": "https://syrio.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://syrio.app/blog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Syrio",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "LifestyleApplication",
+      "description": "App para duenos de mascotas en Espana. Veterinarios cerca, comunidad, mascotas perdidas, recordatorios de salud. Gratis.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como encuentro veterinarios cerca?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syrio usa GPS y OpenStreetMap para mostrarte veterinarias, urgencias 24h, tiendas de mascotas y parques cerca de ti en Espana."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona Pet Match?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pet Match te conecta con mascotas cerca de ti. Desliza a la derecha para hacer match y organiza quedadas con otros duenos. Como Tinder, pero para peludos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Es gratis Syrio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si, Syrio es completamente gratis. Sin anuncios invasivos. Disponible para Android en Google Play."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que hago si pierdo a mi mascota?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Syrio tiene un boton SOS y un sistema de alerta de mascota perdida. Puedes enviar una alerta a todos los usuarios en un radio de 1 a 50 km en segundos."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+    
+
+    <link rel="stylesheet" href="./css/landing.css">
+
+    <!-- Analytics (Agentes 89, 91) - Plausible: privacy-friendly, no GDPR cookie banner needed -->
+    <script defer data-domain="syrio.app" src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+
+    <!-- GSAP + ScrollTrigger (cargar en head para animaciones inmediatas) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+<!-- Scroll progress bar -->
+<div id="scroll-progress" style="position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent));z-index:200;width:0;border-radius:0 3px 3px 0;box-shadow:0 0 8px rgba(207,102,55,0.3)"></div>
+
+<!-- Skip to content (Agentes 4, 60) -->
+<a href="#main-content" class="skip-link" style="position:absolute;top:-100px;left:16px;z-index:200;background:var(--primary);color:#fff;padding:12px 24px;border-radius:0 0 12px 12px;font-weight:800;font-size:15px;text-decoration:none;transition:top 0.2s">Saltar al contenido</a>
+
+<!-- Constellation Canvas -->
+<canvas id="constellation-canvas" aria-hidden="true"></canvas>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+        <a href="/" class="nav-logo">
+            <img src="./images/logo.png" alt="Syrio" onerror="this.style.display='none'">
+            <span>Syrio</span>
+        </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu de navegacion" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="#features">Funcionalidades</a>
+            <a href="#video">Video</a>
+            <a href="#">Blog</a>
+            <a href="https://play.google.com/store/apps/details?id=com.syrio.app" class="nav-cta">Descargar</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main id="main-content" class="main-content">
+    
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+    <div class="organic-blob" style="width:700px;height:700px;background:var(--primary-light);top:-120px;right:-120px;border-radius:65% 35% 50% 50%/40% 55% 45% 60%"></div>
+    <div class="organic-blob" style="width:500px;height:500px;background:var(--amber-light);bottom:-80px;left:-100px;border-radius:40% 60% 55% 45%/55% 40% 60% 45%"></div>
+    <div class="organic-blob" style="width:350px;height:350px;background:var(--accent-light);top:40%;left:55%;border-radius:55% 45% 60% 40%/60% 50% 45% 55%"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text fade-in">
+                <h1>La app que tu <span class="highlight">mascota</span> merece</h1>
+                <p>Veterinarios cerca, comunidad, mascotas perdidas, recordatorios de salud y mucho mas. <strong>Todo en un solo lugar. Gratis.</strong></p>
+                <div class="hero-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.syrio.app" class="btn-primary">
+                        <span style="font-size:22px">&#x2B07;</span> Descargar gratis
+                    </a>
+                    <a href="#video" class="btn-secondary">
+                        Ver video
+                    </a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+                        <span>4.8 estrellas</span>
+                    </div>
+                    <div class="trust-badge">&#x1F6E1;&#xFE0F; Datos seguros</div>
+                    <div class="trust-badge">&#x1F1EA;&#x1F1F8; 100% espanol</div>
+                </div>
+            </div>
+
+            <div class="phone-mockup fade-in">
+                <div class="phone-mockup-inner">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <img src="./images/screenshots/screen1-home.png" class="active" alt="Home de Syrio" onerror="this.style.display='none'">
+                        <img src="./images/screenshots/screen2-mapa.png" alt="Mapa de Syrio" onerror="this.style.display='none'">
+                        <img src="./images/screenshots/screen3-sos.png" alt="SOS de Syrio" onerror="this.style.display='none'">
+                        <img src="./images/screenshots/screen4-comunidad.png" alt="Comunidad Syrio" onerror="this.style.display='none'">
+                        <img src="./images/screenshots/screen5-match.png" alt="Match de Syrio" onerror="this.style.display='none'">
+                        <img src="./images/screenshots/screen6-perfil.png" alt="Perfil de Syrio" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
+<div class="container">
+    <div class="trust-bar fade-in">
+        <div class="trust-item">
+            <span class="icon" style="background:var(--primary-light)">&#x1F5FA;&#xFE0F;</span>
+            Veterinarios geolocalizados
+        </div>
+        <div class="trust-item">
+            <span class="icon" style="background:var(--green-light)">&#x1F198;</span>
+            Emergencias 24h
+        </div>
+        <div class="trust-item">
+            <span class="icon" style="background:var(--amber-light)">&#x1F512;</span>
+            Datos protegidos
+        </div>
+        <div class="trust-item">
+            <span class="icon" style="background:var(--primary-light)">&#x1F1EA;&#x1F1F8;</span>
+            Hecho en Espana
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================
+     FEATURES — Bento Grid
+     ============================================================ -->
+<section class="section" id="features">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Funcionalidades</div>
+            <h2>Todo lo que necesitas para cuidar a tu mejor amigo</h2>
+            <p>Una app completa pensada para duenos, veterinarias, tiendas y refugios de mascotas en Espana.</p>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div class="bento-icon" style="background:var(--primary-light)">&#x1F5FA;&#xFE0F;</div>
+                <h3>Mapa interactivo</h3>
+                <p>Encuentra veterinarias, tiendas, urgencias 24h y refugios cerca de ti. Datos actualizados de OpenStreetMap y Google Places.</p>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon" style="background:var(--emergency-light)">&#x1F198;</div>
+                <h3>Emergencia y mascota perdida</h3>
+                <p>Boton SOS directo al 112. Alerta de perdida: avisa a tu zona con radio de 1 a 50 km en segundos.</p>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon" style="background:var(--amber-light)">&#x1F43E;</div>
+                <h3>Pet Match</h3>
+                <p>Conecta con mascotas cerca de ti. Swipe, haz match y organiza quedadas. Como Tinder, pero para peludos.</p>
+            </div>
+            <div class="bento-card feature-large">
+                <div class="bento-icon" style="background:var(--green-light)">&#x1F48A;</div>
+                <div class="bento-badge" style="background:var(--primary-light);color:var(--primary)">Nuevo</div>
+                <h3>Recordatorios de salud</h3>
+                <p>Vacunas, desparasitaciones, citas veterinarias... Nunca olvides nada importante. Anade recordatorios con un toque y recibe notificaciones cuando toque.</p>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon" style="background:var(--primary-light)">&#x1F4F8;</div>
+                <h3>Comunidad</h3>
+                <p>Comparte momentos con tu mascota. Dale like, comenta y sigue a otros duenos. Un feed estilo Instagram para amantes de los animales.</p>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon" style="background:var(--amber-light)">&#x1F464;</div>
+                <h3>Perfil y privacidad</h3>
+                <p>Tu controlas quien ve que. Perfil privado, solo amigos, o publico. Tus datos, tus reglas, siempre protegidos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCREENSHOT CAROUSEL
+     ============================================================ -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Explora la app</div>
+            <h2>Asi es Syrio por dentro</h2>
+        </div>
+        <div class="screenshot-carousel">
+            <div class="screenshot-card"><img src="./images/screenshots/screen1-home.png" alt="Pantalla de inicio" loading="lazy" onerror="this.style.minHeight='320px';this.style.background='var(--primary-light)'"></div>
+            <div class="screenshot-card"><img src="./images/screenshots/screen2-mapa.png" alt="Mapa con veterinarias" loading="lazy" onerror="this.style.minHeight='320px';this.style.background='var(--primary-light)'"></div>
+            <div class="screenshot-card"><img src="./images/screenshots/screen3-sos.png" alt="Emergencias SOS" loading="lazy" onerror="this.style.minHeight='320px';this.style.background='var(--primary-light)'"></div>
+            <div class="screenshot-card"><img src="./images/screenshots/screen4-comunidad.png" alt="Comunidad" loading="lazy" onerror="this.style.minHeight='320px';this.style.background='var(--primary-light)'"></div>
+            <div class="screenshot-card"><img src="./images/screenshots/screen5-match.png" alt="Pet Match" loading="lazy" onerror="this.style.minHeight='320px';this.style.background='var(--primary-light)'"></div>
+            <div class="screenshot-card"><img src="./images/screenshots/screen6-perfil.png" alt="Perfil de usuario" loading="lazy" onerror="this.style.minHeight='320px';this.style.background='var(--primary-light)'"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     VIDEO SHOWCASE — Placeholder para el video IA
+     ============================================================ -->
+<section class="section" id="video">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Video</div>
+            <h2>Syrio en accion</h2>
+            <p>Descubre como Syrio transforma el cuidado de tu mascota en tu dia a dia.</p>
+        </div>
+        <div class="video-showcase">
+            <div class="video-showcase-text fade-in">
+                <h2>Cada dia con ellos es un regalo</h2>
+                <p>Desde el paseo matutino por el parque hasta encontrar la veterinaria mas cercana en una emergencia. Syrio te acompana en cada momento con tu mascota.</p>
+                <p>Un ecosistema completo para el bienestar animal, disenado en Espana y pensado para ti.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.syrio.app" class="btn-primary" style="margin-top:8px">
+                    &#x2B07; Descargar gratis en Google Play
+                </a>
+            </div>
+            <div class="fade-in">
+                <div class="video-placeholder">
+                    <div class="play-icon">&#x25B6;</div>
+                    <div class="label">Video emocional Syrio<br><span style="font-weight:400;font-size:13px">Proximamente</span></div>
+                    <div class="sub-label">Estilo documental espanol &middot; 30s</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     BLOG PREVIEW
+     ============================================================ -->
+<section class="section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <div class="section-label">Blog</div>
+            <h2>Aprende a cuidar mejor de tu mascota</h2>
+            <p>Guias, consejos y articulos escritos por expertos para duenos de mascotas en Espana.</p>
+        </div>
+        <div class="blog-preview-grid">
+            <a href="/blog/perro-perdido-guia-completa" class="blog-card fade-in fade-in-stagger">
+                <div class="blog-card-image" style="background:var(--primary-light)">
+                    <span>🐶</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-category">Perros</div>
+                    <h3>Perro Perdido — Guía Completa Paso a Paso para Encontrarlo en 24-48 horas</h3>
+                    <p>Descubre los pasos clave para encontrar a tu perro perdido rápidamente. Desde la búsqueda inmediata hasta cómo usar la tecnología y las redes sociales.</p>
+                    <div class="blog-card-meta">
+                        <span>8 min lectura</span>
+                        <span>20 may 2026</span>
+                    </div>
+                </div>
+            </a><a href="/blog/veterinario-urgencias-24h" class="blog-card fade-in fade-in-stagger">
+                <div class="blog-card-image" style="background:var(--amber-light)">
+                    <span>🏥</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-category">Salud</div>
+                    <h3>Cómo Encontrar un Veterinario de Urgencias 24h Cerca de Ti en España</h3>
+                    <p>Guía práctica para localizar atención veterinaria urgente cuando más la necesitas. Usa el mapa de Syrio para encontrar la clínica más cercana.</p>
+                    <div class="blog-card-meta">
+                        <span>6 min lectura</span>
+                        <span>18 may 2026</span>
+                    </div>
+                </div>
+            </a><a href="/blog/calendario-vacunacion-perros-espana" class="blog-card fade-in fade-in-stagger">
+                <div class="blog-card-image" style="background:var(--primary-light)">
+                    <span>🐱</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-category">Salud</div>
+                    <h3>Calendario de Vacunacion para Perros en Espana — Guia Completa 2026</h3>
+                    <p>Descubre que vacunas necesita tu perro, cuando ponerselas y que dice la ley espanola. Calendario completo desde cachorro hasta adulto.</p>
+                    <div class="blog-card-meta">
+                        <span>7 min lectura</span>
+                        <span>15 may 2026</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="text-align:center;margin-top:48px">
+            <a href="#" class="btn-secondary">Ver todos los articulos &#x2192;</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     NEWSLETTER
+     ============================================================ -->
+<section class="section" style="display:none;">
+    <div class="container">
+        <div class="newsletter-box fade-in">
+            <span style="font-size:44px;display:block;margin-bottom:12px">&#x2709;&#xFE0F;</span>
+            <h2>Recibe consejos para tu mascota</h2>
+            <p>Sin spam. Solo contenido util sobre cuidados, salud y bienestar animal.</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" id="newsletter-email" name="email" placeholder="tu@email.com" required autocomplete="email" aria-describedby="newsletter-error">
+                <div class="gdpr-consent" style="text-align:left;margin-top:12px;font-size:13px;color:var(--text-muted);line-height:1.5">
+                    <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer">
+                        <input type="checkbox" id="gdpr-consent" required style="margin-top:2px;accent-color:var(--primary)">
+                        <span>He leido y acepto la <a href="privacidad.html" style="color:var(--primary);font-weight:700;text-decoration:underline">politica de privacidad</a>. Consiento el tratamiento de mi email para recibir la newsletter.</span>
+                    </label>
+                </div>
+                <button type="submit">Suscribirme</button>
+            </form>
+            <div class="newsletter-error" id="newsletter-error" style="display:none;color:var(--emergency);font-size:14px;font-weight:700;padding:10px;position:relative"></div>
+            <div class="newsletter-success" id="newsletter-success">
+                &#x2705; Bienvenido a la familia Syrio! Revisa tu correo.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     CTA FINAL
+     ============================================================ -->
+<section class="cta-section">
+    <div class="organic-blob" style="width:600px;height:600px;background:var(--primary-light);top:50%;left:50%;transform:translate(-50%,-50%)"></div>
+    <div class="organic-blob" style="width:350px;height:350px;background:var(--amber-light);top:30%;left:70%"></div>
+    <div class="container" style="position:relative;z-index:1">
+        <div class="fade-in">
+            <p class="cta-tagline">Tu tranquilidad tiene nombre de estrella &#x2728;</p>
+            <h2>Descarga Syrio gratis</h2>
+            <p>Disponible para Android. Sin anuncios invasivos. Porque tu mascota se lo merece.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.syrio.app" class="btn-primary" style="font-size:19px;padding:20px 40px">
+                &#x2B07; Descargar en Google Play
+            </a>
+            <p style="margin-top:20px;font-size:14px;color:var(--text-muted)">
+                Proximamente en mas plataformas
+            </p>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Syrio</h3>
+                <p>Tu tranquilidad tiene nombre de estrella. La app que une a dueños, veterinarias, tiendas y refugios de mascotas en España.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/syrio_es/" target="_blank" rel="noopener" aria-label="Instagram">&#x1F4F7;</a>
+                    <a href="https://www.tiktok.com/@syrio_es" target="_blank" rel="noopener" aria-label="TikTok">&#x1F3B5;</a>
+                    <a href="mailto:holasyrio@gmail.com" aria-label="Email">&#x2709;&#xFE0F;</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Syrio</h4>
+                <a href="#features">Funcionalidades</a>
+                <a href="#video">Video</a>
+                <a href="#">Blog</a>
+                <a href="https://play.google.com/store/apps/details?id=com.syrio.app">Descargar</a>
+                <a href="mailto:holasyrio@gmail.com">Contacto</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="privacidad.html">Privacidad</a>
+                <a href="terminos.html">Terminos</a>
+                <a href="cookies.html">Cookies</a>
+            </div>
+            <div class="footer-col">
+                <h4>Siguenos</h4>
+                <a href="https://www.instagram.com/syrio_es/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.tiktok.com/@syrio_es" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Syrio &middot; Hecho con cuidado en Malaga, Espana
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ─── Constellation Animation (optimized - Agentes 33, 40, 62) ───
+    (function () {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) return;
+
+        const canvas = document.getElementById('constellation-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d', { alpha: true });
+        let stars = [];
+        let mouse = { x: -1000, y: -1000 };
+        let mousePending = { x: -1000, y: -1000 };
+        let width, height;
+        let animationId;
+        let isVisible = true;
+        let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width * dpr;
+            canvas.height = height * dpr;
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function createStars() {
+            stars = [];
+            const density = width < 768 ? 35000 : 18000;
+            const count = Math.floor((width * height) / density);
+            const connRadius = width < 768 ? 80 : 120;
+            for (let i = 0; i < count; i++) {
+                stars.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 1.8 + 0.6,
+                    baseOpacity: Math.random() * 0.3 + 0.12,
+                    phase: Math.random() * Math.PI * 2,
+                    speed: 0.002 + Math.random() * 0.005,
+                    connRadius: connRadius
+                });
+            }
+        }
+
+        function draw() {
+            if (!isVisible) { animationId = requestAnimationFrame(draw); return; }
+            ctx.clearRect(0, 0, width, height);
+            const time = Date.now() * 0.001;
+            const connR = stars.length > 0 ? stars[0].connRadius : 120;
+
+            ctx.strokeStyle = 'rgba(207,102,55,0.06)';
+            ctx.lineWidth = 0.6;
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    const dx = stars[i].x - stars[j].x;
+                    const dy = stars[i].y - stars[j].y;
+                    const dist = dx * dx + dy * dy;
+                    if (dist < connR * connR) {
+                        const sqrtDist = Math.sqrt(dist);
+                        ctx.beginPath();
+                        ctx.moveTo(stars[i].x, stars[i].y);
+                        ctx.lineTo(stars[j].x, stars[j].y);
+                        ctx.globalAlpha = (1 - sqrtDist / connR) * 0.22;
+                        ctx.stroke();
+                    }
+                }
+            }
+            ctx.globalAlpha = 1;
+
+            for (const s of stars) {
+                const twinkle = Math.sin(time * s.speed * 10 + s.phase) * 0.3 + 0.7;
+                const opacity = s.baseOpacity * twinkle;
+                const gradient = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4);
+                gradient.addColorStop(0, `rgba(207,102,55,${opacity})`);
+                gradient.addColorStop(0.5, `rgba(232,155,32,${opacity * 0.4})`);
+                gradient.addColorStop(1, 'rgba(207,102,55,0)');
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r * 4, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(207,102,55,${Math.min(opacity * 1.2, 1)})`;
+                ctx.fill();
+            }
+        }
+
+        function animate() {
+            draw();
+            mouse.x += (mousePending.x - mouse.x) * 0.1;
+            mouse.y += (mousePending.y - mouse.y) * 0.1;
+            animationId = requestAnimationFrame(animate);
+        }
+
+        resize();
+        createStars();
+        animate();
+
+        new IntersectionObserver(([entry]) => {
+            isVisible = entry.isIntersecting;
+        }).observe(canvas);
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) { cancelAnimationFrame(animationId); }
+            else { animate(); }
+        });
+
+        window.addEventListener('resize', () => { resize(); createStars(); });
+        window.addEventListener('mousemove', (e) => {
+            mousePending.x = e.clientX;
+            mousePending.y = e.clientY;
+        }, { passive: true });
+        window.addEventListener('touchmove', (e) => {
+            mousePending.x = e.touches[0].clientX;
+            mousePending.y = e.touches[0].clientY;
+        }, { passive: true });
+    })();
+
+    // ─── Parallax Effect ───
+    (function () {
+        const parallaxElements = document.querySelectorAll('.parallax-slow');
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const scrollY = window.scrollY;
+                    parallaxElements.forEach(el => {
+                        el.style.transform = `translateY(${scrollY * 0.12}px)`;
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    })();
+
+    // ─── Phone Screenshot Rotation ───
+    (function () {
+        const screens = document.querySelectorAll('.phone-screen img');
+        if (screens.length === 0) return;
+        let current = 0;
+        // Show first immediately
+        if (screens.length > 0) screens[0].classList.add('active');
+        setInterval(() => {
+            screens[current].classList.remove('active');
+            current = (current + 1) % screens.length;
+            screens[current].classList.add('active');
+        }, 3500);
+    })();
+
+    // ─── Scroll: Navbar, Fade-in, Bento Cards ───
+    (function () {
+        const navbar = document.getElementById('navbar');
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const bentoCards = document.querySelectorAll('.bento-card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+        fadeElements.forEach(el => observer.observe(el));
+        bentoCards.forEach(el => observer.observe(el));
+
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const now = window.scrollY;
+            if (now > 30) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = now;
+        }, { passive: true });
+
+        // Scroll progress bar
+        var progressBar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', function() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var progress = (scrollTop / scrollHeight) * 100;
+            if (progressBar) progressBar.style.width = progress + '%';
+        }, { passive: true });
+    })();
+
+    // ─── Hamburger Menu (Agente 44) ───
+    (function () {
+        const btn = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('nav-links');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !expanded);
+            nav.classList.toggle('open');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+
+    // ─── Newsletter Form (Agentes 7, 29, 92) ───
+    (function () {
+        const form = document.getElementById('newsletter-form');
+        if (!form) return;
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const input = form.querySelector('input[type="email"]');
+            const consent = document.getElementById('gdpr-consent');
+            const btn = form.querySelector('button');
+            const success = document.getElementById('newsletter-success');
+            const errorEl = document.getElementById('newsletter-error');
+            const email = input.value.trim();
+
+            if (!email || !email.includes('@')) {
+                errorEl.style.display = 'block';
+                errorEl.textContent = 'Por favor, introduce un email valido.';
+                return;
+            }
+
+            if (consent && !consent.checked) {
+                errorEl.style.display = 'block';
+                errorEl.textContent = 'Debes aceptar la politica de privacidad para suscribirte.';
+                return;
+            }
+
+            errorEl.style.display = 'none';
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+
+            try {
+                const res = await fetch('/api/newsletter', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, source: 'web' })
+                });
+                if (res.ok) {
+                    form.style.display = 'none';
+                    success.style.display = 'block';
+                } else {
+                    const data = await res.json().catch(() => ({}));
+                    btn.disabled = false;
+                    btn.textContent = 'Suscribirme';
+                    errorEl.style.display = 'block';
+                    errorEl.textContent = data.message || 'Error al suscribir. Intenta de nuevo o escribenos a holasyrio@gmail.com';
+                }
+            } catch {
+                btn.disabled = false;
+                btn.textContent = 'Suscribirme';
+                errorEl.style.display = 'block';
+                errorEl.textContent = 'Error de conexion. Revisa tu internet e intenta de nuevo.';
+            }
+        });
+    })();
+
+    // ─── GSAP Premium Animations (Agentes 34, 45, 93) ───
+    (function () {
+        if (typeof gsap === 'undefined') return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero entrance - staggered text reveal
+        gsap.from('.hero-text h1', {
+            y: 60, opacity: 0, duration: 1, ease: 'power3.out'
+        });
+        gsap.from('.hero-text p', {
+            y: 40, opacity: 0, duration: 0.8, delay: 0.3, ease: 'power3.out'
+        });
+        gsap.from('.hero-buttons', {
+            y: 30, opacity: 0, duration: 0.7, delay: 0.5, ease: 'power3.out'
+        });
+        gsap.from('.trust-badges', {
+            y: 20, opacity: 0, duration: 0.6, delay: 0.7, ease: 'power3.out'
+        });
+        gsap.from('.phone-mockup', {
+            x: 80, opacity: 0, duration: 1.2, delay: 0.2, ease: 'power3.out'
+        });
+
+        // Organic blobs floating
+        gsap.to('.organic-blob', {
+            duration: 20,
+            x: 'random(-30, 30)',
+            y: 'random(-20, 30)',
+            rotation: 'random(-15, 15)',
+            scale: 'random(0.95, 1.08)',
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            stagger: { each: 3 }
+        });
+
+        // Bento grid scroll reveal
+        gsap.utils.toArray('.bento-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                },
+                y: 60,
+                opacity: 0,
+                duration: 0.7,
+                delay: i * 0.08,
+                ease: 'power3.out'
+            });
+        });
+
+        // Section headers scroll reveal
+        gsap.utils.toArray('.section-header').forEach(header => {
+            gsap.from(header, {
+                scrollTrigger: {
+                    trigger: header,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none'
+                },
+                y: 40,
+                opacity: 0,
+                duration: 0.7,
+                ease: 'power3.out'
+            });
+        });
+
+        // Screenshot cards stagger
+        gsap.utils.toArray('.screenshot-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card.parentElement,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                },
+                x: 60,
+                opacity: 0,
+                duration: 0.6,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
+        });
+
+        // Blog cards stagger
+        gsap.utils.toArray('.blog-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%',
+                    toggleActions: 'play none none none'
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.6,
+                delay: i * 0.1,
+                ease: 'power3.out'
+            });
+        });
+
+        // Newsletter box pop
+        gsap.from('.newsletter-box', {
+            scrollTrigger: {
+                trigger: '.newsletter-box',
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            },
+            scale: 0.95,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'back.out(1.4)'
+        });
+
+        // CTA section parallax
+        gsap.to('.cta-section .organic-blob:first-child', {
+            scrollTrigger: {
+                trigger: '.cta-section',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: 1
+            },
+            y: -80,
+            scale: 1.1
+        });
+
+        // Parallax on hero blobs
+        gsap.to('.hero .organic-blob:first-child', {
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1
+            },
+            y: 120,
+            x: -40
+        });
+
+        // 3D Tilt effect on phone mockup (desktop only)
+        if (window.innerWidth > 960) {
+            var phoneMockup = document.querySelector('.phone-mockup-inner');
+            if (phoneMockup) {
+                phoneMockup.addEventListener('mousemove', function(e) {
+                    var rect = this.getBoundingClientRect();
+                    var x = e.clientX - rect.left;
+                    var y = e.clientY - rect.top;
+                    var centerX = rect.width / 2;
+                    var centerY = rect.height / 2;
+                    var rotateY = ((x - centerX) / centerX) * 8;
+                    var rotateX = -((y - centerY) / centerY) * 8;
+                    gsap.to(this, { rotateY: rotateY, rotateX: rotateX, duration: 0.5, ease: 'power2.out' });
+                });
+                phoneMockup.addEventListener('mouseleave', function() {
+                    gsap.to(this, { rotateY: 0, rotateX: 0, duration: 0.7, ease: 'power2.out' });
+                });
+            }
+        }
+
+        // Hover glow effect on bento cards
+        document.querySelectorAll('.bento-card, .blog-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                gsap.to(this, { scale: 1.02, duration: 0.4, ease: 'power2.out' });
+            });
+            card.addEventListener('mouseleave', function() {
+                gsap.to(this, { scale: 1, duration: 0.4, ease: 'power2.out' });
+            });
+        });
+
+    })();
+</script>
+
+<!-- Cookie Consent Banner (Agentes 7, 29) -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:16px 24px;z-index:9999;display:none;box-shadow:0 -4px 24px rgba(0,0,0,0.08);font-size:14px;line-height:1.5">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <p style="margin:0;color:var(--text-secondary);max-width:700px">
+            Usamos cookies tecnicas necesarias para el funcionamiento del sitio y analitica anonima (Plausible) para mejorar tu experiencia. Sin cookies de publicidad ni rastreo. 
+            <a href="privacidad.html" style="color:var(--primary);font-weight:700;text-decoration:underline">Politica de privacidad</a>.
+        </p>
+        <div style="display:flex;gap:10px;flex-shrink:0">
+            <button id="cookie-reject" style="background:transparent;color:var(--text-secondary);border:1px solid var(--border);padding:10px 20px;border-radius:12px;font-weight:700;cursor:pointer;font-family:inherit;font-size:14px;transition:all 0.2s">Solo necesarias</button>
+            <button id="cookie-accept" style="background:var(--primary);color:#fff;border:none;padding:10px 20px;border-radius:12px;font-weight:800;cursor:pointer;font-family:inherit;font-size:14px;transition:all 0.2s">Aceptar todas</button>
+        </div>
+    </div>
+</div>
+<script>
+(function() {
+    if (localStorage.getItem('syrio-cookies')) return;
+    var banner = document.getElementById('cookie-banner');
+    banner.style.display = 'block';
+    document.getElementById('cookie-accept').onclick = function() {
+        localStorage.setItem('syrio-cookies', 'accepted');
+        banner.style.display = 'none';
+    };
+    document.getElementById('cookie-reject').onclick = function() {
+        localStorage.setItem('syrio-cookies', 'rejected');
+        banner.style.display = 'none';
+    };
+})();
+</script>
+</body>
+</html>
